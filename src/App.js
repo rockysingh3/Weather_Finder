@@ -39,7 +39,7 @@ export default class App extends React.Component {
         });
       }else {
         this.setState({
-          error: 'You did not enter values for city or country'
+          error: 'You did not enter any values for city or country'
         })
       }
   }
