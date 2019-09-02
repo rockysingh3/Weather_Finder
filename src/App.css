@@ -6,7 +6,7 @@ body {
   }
   
   .wrapper {
-    background: linear-gradient(to right, #e67e22, #e74c3c);
+    background: linear-gradient(to right, #3d1f04, #2c3799);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,13 +17,13 @@ body {
     height: 90vh;
     background: #fff;
     box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
   }
   
   .title-container {
     height: 90vh;
-    background: url("/img/bg.jpg") center center no-repeat;
+    background: url("./img/bg.webp") center center no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
