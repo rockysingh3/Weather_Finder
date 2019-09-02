@@ -10,7 +10,7 @@ import KEY from './API_KEY';
 export default class App extends React.Component {
 
   state = {
-    temp: '',
+    temperature: '',
     city: '',
     description: '',
     country: '',
@@ -30,7 +30,7 @@ export default class App extends React.Component {
 
       if(city && country) {
         this.setState({
-          temp: data.main.temp,
+          temperature: data.main.temp,
           city: data.name,
           country: data.sys.country,
           humidity: data.main.humidity,
@@ -39,7 +39,7 @@ export default class App extends React.Component {
         });
       }else {
         this.setState({
-          error: 'You did not end the values for city or country'
+          error: 'You did not enter values for city or country'
         })
       }
   }
@@ -47,16 +47,28 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Titles />
-        <Form getWeather={this.getWeather}/>
-        <Weather 
-          temp={this.state.temp}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description }
-          error={this.state.error}
-        />
+        <div className="wrapper">
+          <div className="main">
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-5 title-container">
+                  <Titles />
+                </div>
+                <div className="col-xs-7 form-container">
+                <Form getWeather={this.getWeather}/>
+                <Weather 
+                  temp={this.state.temperature}
+                  city={this.state.city}
+                  country={this.state.country}
+                  humidity={this.state.humidity}
+                  description={this.state.description }
+                  error={this.state.error}
+                />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
