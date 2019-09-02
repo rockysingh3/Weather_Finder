@@ -1,14 +1,16 @@
 import React from 'react';
 
 
-export default Weather = (props) => {
+const Weather = props => {
         return (
             <div>
-                { this.props.city && this.props.country && <p>Location: {this.props.city}, {this.props.country}</p>  }
-                { this.props.temp &&  <p>Teamperature: {this.props.temp}</p>}
-                { this.props.description && <p> Description: {this.props.description}</p>}
-                { this.props.humidity && <p> Humidity: {this.props.humidity}</p>}
-                { this.props.error && <p>{this.props.error}</p>}
+                { props.city && props.country && <p>Location: { props.city }, { props.country }</p>  }
+                { props.temp &&  <p>Teamperature: { props.temp }</p>}
+                { props.description && <p> Description: { props.description }</p>}
+                { props.humidity && <p> Humidity: { props.humidity }</p>}
+                { props.error && <p>{ props.error }</p>}
             </div>
         )
 }
+
+export default Weather;
