@@ -1,6 +1,7 @@
 import React from 'react';
 import Titles from './components/Titles'
-import ReactDOM from 'react-dom';
+import Form from './components/Form'
+import Weather from './components/Weather'
 
 
 export default class App extends React.Component {
@@ -8,6 +9,8 @@ export default class App extends React.Component {
     return (
       <div>
         <Titles />
+        <Form />
+        <Weather />
       </div>
     )
   }
